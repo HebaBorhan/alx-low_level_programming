@@ -1,6 +1,6 @@
 /**
  * main - printing strings
- * return: 0
+ * return: 0 - success
  */
 #include <stdio.h>
 	int main(void)
