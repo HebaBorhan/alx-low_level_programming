@@ -1,3 +1,7 @@
+/**
+ * puts - printing strings
+ * return: 0
+ */
 #include <stdio.h>
 	int main(void)
 {
