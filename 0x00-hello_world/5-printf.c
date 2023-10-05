@@ -1,4 +1,5 @@
-/** main - printing strings with printf
+/**
+ * main - printing strings with printf
  *
  * printf needs a new line
  *
