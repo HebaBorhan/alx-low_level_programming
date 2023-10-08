@@ -23,7 +23,7 @@ int main(void)
 		putchar(a);
 	}
 		/* using for loop for commas after numbers from 0 to 8 */
-        for (i = 0; i <= 9; i++)
+        for (i = 0; i <= 8; i++)
 	{
 		/* printing ASCII character */
 		putchar (b);
