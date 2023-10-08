@@ -11,7 +11,7 @@ int main(void)
 	char letter = 'a';
 	for (letter = 1; letter < 26; letter++)
 	{
-		putchar(alphabet);
+		putchar(letter);
 
 		return = 0
 	}
