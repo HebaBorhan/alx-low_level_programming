@@ -20,12 +20,11 @@ int main(void)
 	{
 		/* converting the integer into numeral ASCII character */
 		putchar(i + '0');
-
 		/* printing ASCII characters space and comma after all numbers except 9 */
 		if (i < 9)
 		{
-		putchar(a);
-		putchar (b);
+		putchar(b);
+		putchar (a);
 		}
 	}
 		return (0);
