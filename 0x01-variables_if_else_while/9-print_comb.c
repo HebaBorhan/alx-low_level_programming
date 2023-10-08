@@ -12,22 +12,18 @@ int main(void)
 	int i = 0;
 	int a = 32;
 	int b = 44;
+	int c = 57;
 
-	/* using for loop for numbers from 0 to 9 */
-	for (i = 0; i <= 9; i++)
+	/* using for loop for numbers from 0 to 8 */
+	for (i = 0; i <= 8; i++)
 	{
 		/* converting the integer into numeral ASCII character */
 		putchar(i + '0');
 
 		/* printing ASCII character */
 		putchar(a);
-	}
-		/* using for loop for commas after numbers from 0 to 8 */
-        for (i = 0; i <= 8; i++)
-	{
-		/* printing ASCII character */
 		putchar (b);
+		putchar (c);
 	}
-		putchar ('\n');
 		return (0);
 }
