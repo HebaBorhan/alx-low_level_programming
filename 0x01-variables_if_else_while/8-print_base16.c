@@ -18,7 +18,7 @@ int main(void)
 		/* converting the integer a into numeral ASCII character */
 		putchar(a + '0');
 	}
-	
+
 	/* using for loop for numbers from 97 to 102 */
 	for (b = 97; b <= 102; b++)
 	{
@@ -27,4 +27,4 @@ int main(void)
 	}
 		putchar ('\n');
 		return (0);
-
+}
