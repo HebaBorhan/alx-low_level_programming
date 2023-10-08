@@ -2,7 +2,8 @@
 #include <time.h>
 #include <stdio.h>
 
-/** main - function to determine conditions of the number variable modulus value
+/**
+ * main - function to determine conditions of the number variable modulus value
  *
  * Return: 0 on success
  */
@@ -10,7 +11,9 @@
 int main(void)
 {
 	int n;
-	int a; /* declare a new variable: modulus of n by 10 */
+	
+	/* declare a new variable: modulus of n by 10 */
+	int a;
 	
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
