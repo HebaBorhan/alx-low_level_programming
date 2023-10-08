@@ -20,7 +20,7 @@ int main(void)
 
 	for (letterUpper = 'A'; letterUpper <= 'Z'; letterUpper++)
 	{
-		putchar(letter);
+		putchar(letterUpper);
 	}
 		putchar ('\n');
 		return (0);
