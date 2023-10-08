@@ -10,12 +10,11 @@
 int main(void)
 {
 	int n;
-
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	
 	int a; /* declare a new variable: modulus of n by 10 */
 	a = n % 10;
+	
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 	
 	if (a > 5)
 	{
