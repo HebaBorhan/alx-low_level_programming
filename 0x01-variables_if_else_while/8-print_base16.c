@@ -10,7 +10,7 @@ int main(void)
 {
 	/* declaring an integer variable */
 	int a = 0;
-	int b = 0;
+	int b = 97;
 
 	/* using for loop for numbers from 0 to 9 */
 	for (a = 0; a <= 9; a++)
@@ -20,10 +20,10 @@ int main(void)
 	}
 	
 	/* using for loop for numbers from 97 to 102 */
-	for (b = 0; b <= 6; b++)
+	for (b = 97; b <= 102; b++)
 	{
 		/* converting the integer b into numeral ASCII character */
-		putchar(b + '97');
+		putchar(b);
 	}
 		putchar ('\n');
 		return (0);
