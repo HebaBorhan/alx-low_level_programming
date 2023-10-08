@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - printing numbers from 0 to 9 followed by space and comma using putchar
+ * main - numbers from 0 to 9 followed by space and comma using putchar
  *
  * Return: 0 for success
  */
