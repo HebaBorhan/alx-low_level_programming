@@ -2,7 +2,9 @@
 
 /**
  * add - adds two integers
- *@a and @b: integers to be added
+ *@a: first integer to be added
+ *@b: second integer to be added
+ * 
  * Return: x result of the add
  */
 
