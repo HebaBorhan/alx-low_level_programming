@@ -1,15 +1,22 @@
 #include<stdio.h>
+#include "main.h"
 
 /**
- * main - printing number zero  using putchar and ASCII charachters
+ * main - printing _putchar
  *
  * Return: 0 for success
  */
-
-int main()
+int main(void)
 {
-	int a = 48;
-	putchar(a);
+	putchar('_');
+	putchar('p');
+	putchar('u');
+	putchar('t');
+	putchar('c');
+	putchar('h');
+	putchar('a');
+	putchar('r');
+	putchar('\n');
 	
-	return 0;
+	return (0);
 }
