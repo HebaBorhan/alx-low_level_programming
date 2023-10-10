@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - printing _putchar
+ * main - printing _putchar with several putchar functions
  *
  * Return: 0 for success
  */
@@ -17,6 +17,6 @@ int main(void)
 	putchar('a');
 	putchar('r');
 	putchar('\n');
-	
+
 	return (0);
 }
