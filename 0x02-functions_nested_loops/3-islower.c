@@ -2,7 +2,8 @@
 
 /**
  * _islower - determine if a letter is lowercase or no
- *
+ *@c: The letter to be checked
+ 
  * Return: 1 if lowercase, 0 otherwise
  */
 
