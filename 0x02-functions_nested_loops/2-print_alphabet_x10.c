@@ -10,7 +10,7 @@ void print_alphabet_x10(void)
 {
 	/* declaring integer i */
 	int i = 0;
-	
+
 	/* for loop 10 times */
 	for (i = 0; i <= 10; i++)
 	{
@@ -23,6 +23,6 @@ void print_alphabet_x10(void)
 	{
 		putchar(letter);
 	}
-	}
 	putchar ('\n');
+	}
 }
