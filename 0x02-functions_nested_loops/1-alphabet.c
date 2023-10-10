@@ -6,12 +6,6 @@
  * Return: 0 for success
  */
 
-int main(void)
-{
-	print_alphabet();
-	return (0);
-}
-
 void print_alphabet(void)
 {
 	/* declaring a character variable */
