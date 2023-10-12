@@ -22,7 +22,7 @@ void print_triangle(int size)
 			}
 
 			/* nested loop for repeating squares */
-			for (s = 1; s <= i; s++)
+			for (s = 0; s <= i; s++)
 			{
 				_putchar('#');
 			}
