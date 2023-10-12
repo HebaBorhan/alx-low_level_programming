@@ -17,6 +17,6 @@ void print_numbers(void)
 		/* converting the integer into numeral ASCII character */
 		_putchar(i + '0');
 	}
-	_putchar ('\n');
+	_putchar('\n');
 	return (0);
 }
