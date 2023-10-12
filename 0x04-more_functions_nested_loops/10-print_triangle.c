@@ -21,7 +21,7 @@ void print_triangle(int size)
 			}
 
 			/* nested loop for repeating squares */
-			for (j = 1; j <= i; j++)
+			for (s = 1; s <= i; s++)
 			{
 				_putchar('#');
 			}
