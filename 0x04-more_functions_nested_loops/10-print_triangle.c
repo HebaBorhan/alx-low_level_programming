@@ -13,10 +13,10 @@ void print_triangle(int size)
 
 	if (size > 0)
 	{
-		for (i = 1; i <= size; i++)
+		for (i = 0; i < size; i++)
 		{
 			/* nested loop for identation */
-			for (j = 1; j <= size; j++)
+			for (j = i+1; j < size; j++)
 			{
 				_putchar(' ');
 			}
