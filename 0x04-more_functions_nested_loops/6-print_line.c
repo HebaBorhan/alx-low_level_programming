@@ -2,11 +2,11 @@
 
 /**
  * print_line - draws a straight line
+ *@n:  number of times the character _ should be printed
  */
 
 void print_line(int n)
 {
-	int n;
 	int i;
 
 	if (n > 0)
