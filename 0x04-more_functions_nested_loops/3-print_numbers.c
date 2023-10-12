@@ -11,7 +11,7 @@ void print_numbers(void)
 	/* declaring an integer variable */
 	int i = 0;
 
-	/* using for loop for numbers from 0 to 9 */
+	/* for loop for numbers from 0 to 9 */
 	for (i = 0; i <= 9; i++)
 	{
 		/* converting the integer into numeral ASCII character */
