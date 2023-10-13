@@ -16,7 +16,7 @@ void print_triangle(int size)
 		for (i = 0; i < size; i++)
 		{
 			/* nested loop for identation */
-			for (j = i+1; j < size; j++)
+			for (j = i + 1; j < size; j++)
 			{
 				_putchar(' ');
 			}
