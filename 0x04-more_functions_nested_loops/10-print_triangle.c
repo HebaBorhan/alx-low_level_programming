@@ -19,7 +19,7 @@ void print_triangle(int size)
 	{
 		for (i = 0; i < size; i++)
 		{
-			/* nested loop for identation */
+			/* nested loop for indentation */
 			for (j = i + 1; j < size; j++)
 			{
 				_putchar(' ');
