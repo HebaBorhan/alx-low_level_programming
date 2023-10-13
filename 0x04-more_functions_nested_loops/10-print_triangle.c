@@ -16,6 +16,7 @@ void print_triangle(int size)
 		_putchar('\n');
 	}
 	else
+	{
 		for (i = 0; i < size; i++)
 		{
 			/* nested loop for identation */
@@ -31,4 +32,5 @@ void print_triangle(int size)
 			}
 			_putchar('\n');
 		}
+	}
 }
