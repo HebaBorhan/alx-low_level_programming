@@ -11,8 +11,11 @@ void print_triangle(int size)
 	int j;
 	int s;
 
-	if (size > 0)
+	if (size <= 0)
 	{
+		_putchar('\n');
+	}
+	else
 		for (i = 0; i < size; i++)
 		{
 			/* nested loop for identation */
@@ -28,9 +31,4 @@ void print_triangle(int size)
 			}
 		_putchar('\n');
 		}
-	}
-	else
-	{
-	_putchar('\n');
-	}
 }
