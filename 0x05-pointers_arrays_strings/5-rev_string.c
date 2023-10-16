@@ -8,6 +8,10 @@
 void rev_string(char *s)
 {
 	int i;
+	/* j the first character in the new reversed array */
+	j = 0;
+	/* to store character posiion */
+	char temp;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
@@ -17,9 +21,6 @@ void rev_string(char *s)
 	i--;
 
 	int j;
-
-	/* j the first character in the new reversed array */
-	j = 0;
 
 	while (j < i)
 	{
