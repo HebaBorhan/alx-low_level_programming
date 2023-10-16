@@ -20,13 +20,10 @@ void rev_string(char *s)
 	/* move i to last charracter in the array */
 	i--;
 
-	j = 0;
-	
 	for (j = 0; j < (i / 2); j++)
 	{
 		temp = s[j];
 		s[j] = s[i - j - 1];
 		s[i - j - 1] = temp;
-		i--;
 	}
 }
