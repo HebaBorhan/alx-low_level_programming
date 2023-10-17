@@ -13,14 +13,14 @@ void rev_string(char *s)
 	/* to store character posiion */
 	char temp;
 
-	for (i = 0; s[i] != '\0'; ++i)
+	for (i = 0; s[i] != '\0'; i++)
 	{
 	}
 
 	/* move i to last charracter in the array */
 	i--;
 
-	for (j = 0; j < (i / 2); j++)
+	for (j = 0; j <= (i / 2); j++)
 	{
 		temp = s[j];
 		s[j] = s[i - 1 - j];
