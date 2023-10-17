@@ -2,7 +2,7 @@
 
 /**
  * puts_half -  prints half of a string
- *@str: strings to be printed
+ *@str: string to be printed
  */
 
 void puts_half(char *str)
@@ -14,7 +14,7 @@ void puts_half(char *str)
 	}
 
 	i++;
-	
+
 	for (i = (i / 2); str[i] != '\0'; i++)
 	{
 		_putchar(str[i]);
