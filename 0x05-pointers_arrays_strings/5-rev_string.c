@@ -13,7 +13,7 @@ void rev_string(char *s)
 	/* to store character posiion */
 	char temp;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] != '\0'; ++i)
 	{
 	}
 
