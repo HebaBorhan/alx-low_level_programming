@@ -9,6 +9,18 @@
 
 int _atoi(char *s)
 {
-	return (0);
+	unsigned int n = 0;
+	int var = 1;
+
+	do {
+		if (*s == '-')
+			var *= -1;
+		else if (*s >= '0' && *s <= '9')
+			n = (n * 10) + (*s - '0');
+		else if (n > 0)
+			break;
+	} while (*s ++);
+
+	return (n * var);
 }
 
