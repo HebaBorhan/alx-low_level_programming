@@ -28,7 +28,7 @@ int *array_range(int min, int max)
 	}
 	else
 	{
-		for (i = min; i <= max && min < max; i++)
+		for (i = min; i <= max; i++)
 		{
 			ptr[i - min] = i;
 		}
