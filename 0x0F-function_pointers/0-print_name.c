@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * print_name - prints name
+ * print_name - function that prints a name
  *@name: string to be printed
  *@f: pointer to function
  */
