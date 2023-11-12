@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * op_add - sums two integers
@@ -13,7 +14,7 @@
 
 int op_add(int a, int b)
 {
-	return (a + b)
+	return (a + b);
 }
 
 /**
