@@ -5,7 +5,7 @@
 /**
  * main - main function
  * @argc: number of arguments
- * @argv: argument value
+ * @argv: value of argument
  *
  * Return: 0 on success
  */
