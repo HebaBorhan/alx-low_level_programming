@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 
 	if (argc > 4)
 	{
-		printf('\n');
+		printf("\n");
 		exit(98);
 	}
 
@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	num2 = atoi(argv[3]);
 	s = argv[2];
 
-	if (num1 == NULL || num2 == NULL)
+	if (num1 == '\0' || num2 == '\0')
 	{
 		printf("Error\n");
 		exit(98);
@@ -35,7 +35,7 @@ int main(int argc, char **argv)
 
 	f = get_op_func(s);
 
-	if (!(f))
+	if (f == NULL)
 	{
 		printf("Error\n");
 		exit(99);
