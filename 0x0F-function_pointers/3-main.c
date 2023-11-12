@@ -27,7 +27,7 @@ int main(int argc, char **argv)
 	num2 = atoi(argv[3]);
 	s = argv[2];
 
-	if (num1 == '\0' || num2 == '\0')
+	if (num1 == 0 || num2 == 0)
 	{
 		printf("Error\n");
 		exit(98);
