@@ -48,6 +48,7 @@ int _printf(const char *format, ...)
 				if (format[i] == sps[j].spec[0])
 				{
 					counter = sps[j].f(args);
+					break;
 				}
 			}
 		}
