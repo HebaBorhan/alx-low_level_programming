@@ -1,0 +1,194 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdarg.h>
+
+char p = '%' + 0;
+
+/**
+ * struct spec - Struct of specifiers
+ * @spec: specifiers
+ * @f: function associated
+ */
+
+typedef struct spec
+{
+	char spec;
+	int (*f)(va_list);
+} spec_t;
+
+int print_char(va_list args);
+int print_string(va_list args);
+
+/**
+ * print_char - print single character
+ * Return: 1
+ */
+int print_char(va_list args)
+{
+	char a = va_arg(args, int);
+	write(1, &a, 1);
+	return(1);
+}
+
+/**
+ * print_string - print string array of chars
+ * Return: 1
+ */
+int print_string(va_list args)
+{
+	char a = va_arg(args, int);
+	write(1, &a, 1);
+	return(1);
+}
+
+/**
+ * _strlen - returns the length of a string
+ * @st: the string to be checked
+ *
+ * Return: length which is the length of the string
+ */
+
+
+spec_t specs[] = {
+		{'c', print_char},
+		{'s', print_string},
+
+		{'\0', NULL}
+		};
+
+
+/**
+ * _printf - Custom printf function
+ * @format: Format specifier string
+ *
+ * Return: Number of char printed excluding null byte
+ */
+
+int _printf(const char *format, ...)
+{
+	spec_t sps[] = {
+		{"c", print_char},
+		{"s", print_string},
+		{NULL, NULL}
+	};
+
+	int i = 0;
+
+	va_start(args, format);
+
+	for (i = 0; format[i] != '\0' && format[i + 1] != '\0'; i++)
+	{
+		if (format[i] == '%' && format[i + 1] != '\0')
+		{
+				char *spec = &(format[i + 1]);
+				int j = 0;
+
+			    va_end(args);
+			    
+			    return i;
+}
+
+
+
+
+
+#include "main.h"
+/**
+ * _printf - Custom printf function
+ * @format: Format specifier string
+ * Return: Number of char printed excluding null byte
+ */
+int _printf(const char *format, ...)
+{
+	va_list args;
+	int i, length;
+
+	va_start(args, format);
+	if (format == NULL)
+	{
+		return (-1);
+	}
+	for (i = 0; format[i] != '\0'; i++)
+	{
+		if (format[i] != '%')
+		{
+			char a = format[i];
+
+			write(1, &a, 1);
+		}
+		else if (format[i] == '%' && format[i + 1] == '%')
+		{
+			char b = format[i];
+
+			write(1, &b, 1);
+			i++;
+		}
+		else if (format[i] == '%' && format[i + 1] == 'c')
+		{
+			char c = va_arg(args, int);
+
+			write(1, &c, 1);
+			i++;
+		}
+		else if (format[i] == '%' && format[i + 1] == 's')
+		{
+			char *string = va_arg(args, char *);
+
+			if (string == NULL)
+			{
+				write(1, "(null)", 6);
+			}
+			else
+			length = _strlen(string);
+
+			write(1, string, length);
+			i++;
+		}
+	}
+	va_end(args);
+	return (i);
+}
+
+			int length;
+			char *st;
+
+			for (s = 0; s < length, s++)
+			{
+				st = va_arg(args, st *);
+			}
+		}
+		else
+		{
+			write(1, &format[i], 1);
+		}
+
+
+
+if (format[i] == '%')
+			{
+				char b = format[i];
+				write(1, &b, 1);
+			}
+			else if (format[i] == 'c')
+			{
+				char c = va_arg(args, int);
+
+				write(1, &c, 1);
+			}
+			else if (format[i] == 's')
+			{
+				char *string = va_arg(args, char *);
+
+				if (string == NULL)
+				{
+					write(1, "(null)", 6);
+				}
+				else
+				{
+					length = _strlen(string);
+					write(1, string, length);
+				}
+			}
+		}
+	}
+	va_end(args);
