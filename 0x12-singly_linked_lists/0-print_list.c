@@ -5,7 +5,7 @@
 
 /**
  * _strlen - returns the length of a string
- * @string: the string to be checked
+ * @str: the string to be checked
  *
  * Return: len which is the length of the string
  */
@@ -13,7 +13,13 @@
 int _strlen(char *str)
 {
 	int len;
+
 	len = 0;
+
+	if (str == NULL)
+	{
+		return (0);
+	}
 
 	while (str[len] != '\0')
 	{
@@ -22,26 +28,30 @@ int _strlen(char *str)
 	return (len);
 }
 
+/**
+ * print_list - prints all the elements of a list
+ * @h: head
+ *
+ * Return: int number of nodes
+ */
+
 size_t print_list(const list_t *h)
 {
 	size_t count = 0;
-	
-	struct list_s *h = malloc(sizeof(struct list_s));
-	h -> next = NULL;
 
-	if (h == NULL)
+	while (h != NULL)
 	{
-		printf("[0] (nil)");
-	}
-
-	struct list_s *ptr = NULL;
-	ptr = h;
-
-	while (ptr != NULL)
-	{
-		printf([%d] %s, _strlen(h -> str), h -> str);
+		if (h->str == NULL)
+		{
+			printf("[%d] %s\n", _strlen(h->str), ("(nil)\n"));
+		}
+		else
+		{
+		printf("[%d] %s\n", _strlen(h->str), h->str);
+		}
+		h = h->next;
 		count++;
-		ptr = ptr -> next;
 	}
+
 	return (count);
 }
