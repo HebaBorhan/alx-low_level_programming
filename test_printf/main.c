@@ -29,9 +29,21 @@ int main(void)
     _printf("This is a third string: %  s\n", "abc");
     printf("third string: %  s\n", "abc");
 
-    /**
-    _printf("Length:[%d, %i]\n", len, len);
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+
+     printf("Unknown:[%k] abc\n", "I am a string !");
+     printf("Unknown: %k abc\n", "I am a string !");
+     printf("Unknown: %kabc\n", "I am a string !");
+    _printf("Unknown:[%k]\n", "I am a string !");
+  
     printf("Length:[%d, %i]\n", len2, len2);
+    _printf("Length:[%d, %i]\n", len, len);
     _printf("Negative:[%d]\n", -762534);
     printf("Negative:[%d]\n", -762534);
     _printf("Unsigned:[%u]\n", ui);
@@ -40,25 +52,12 @@ int main(void)
     printf("Unsigned octal:[%o]\n", ui);
     _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
     printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
-    */
 
-    _printf("Character:[%c]\n", 'H');
-    printf("Character:[%c]\n", 'H');
-    _printf("String:[%s]\n", "I am a string !");
-    printf("String:[%s]\n", "I am a string !");
-
-    /**
     _printf("Address:[%p]\n", addr);
     printf("Address:[%p]\n", addr);
-    */
 
-    len = _printf("Percent:[%%]\n");
-    len2 = printf("Percent:[%%]\n");
-
-    /**
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    */
-   
+  
     return (0);
 }
