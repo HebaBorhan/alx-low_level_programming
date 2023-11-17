@@ -45,20 +45,16 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-
 	if (last_node == NULL)
 	{
 		return (NULL);
 	}
-
 	last_node->str = strdup(str);
-
 	if (last_node->str == NULL)
 	{
 		free(last_node);
 		return (NULL);
 	}
-
 	last_node->len = _strlen(last_node->str);
 
 	if (temp != NULL)
