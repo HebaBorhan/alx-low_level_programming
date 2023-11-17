@@ -9,7 +9,6 @@
  *
  * Return: len which is the length of the string
  */
-
 int _strlen(char *str)
 {
 	int len;
@@ -22,7 +21,6 @@ int _strlen(char *str)
 	}
 	return (len);
 }
-
 /**
  * add_node_end - adds a new node at the beginning of a list
  * @head: head
@@ -30,7 +28,6 @@ int _strlen(char *str)
  *
  * Return: address of new element or NULL if failed
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *last_node = malloc(sizeof(list_t));
@@ -45,7 +42,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	{
 		return (NULL);
 	}
-	if (last_node == NULL)
+	if (last_node == NULL || head == NULL)
 	{
 		return (NULL);
 	}
