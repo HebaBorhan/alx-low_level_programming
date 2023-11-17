@@ -10,6 +10,5 @@
 
 void free_list(list_t *head)
 {
-	struct list_t *head = malloc(sizeof(struct list_t);
 	free(head);
 }
