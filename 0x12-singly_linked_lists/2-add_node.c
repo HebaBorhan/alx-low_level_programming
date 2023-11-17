@@ -13,6 +13,7 @@
 int _strlen(char *str)
 {
 	int len;
+
 	len = 0;
 
 	while (str[len] != '\0')
@@ -24,6 +25,7 @@ int _strlen(char *str)
 
 /**
  * add_node - adds a new node at the beginning of a list
+ * @head: head
  * @str: string
  *
  * Return: address of new element or NULL if failed
