@@ -5,7 +5,7 @@
  * @n: first number
  * @m: number to get to
  *
- * Returns: int bits to flip from n to m
+ * Return: int bits to flip from n to m
  */
 
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
@@ -13,7 +13,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned int count = 0;
 	unsigned int result = (n ^ m);
 
-	while (result > 0)
+	while (result != 0)
 	{
 		if ((result & 1) == 1)
 		{
