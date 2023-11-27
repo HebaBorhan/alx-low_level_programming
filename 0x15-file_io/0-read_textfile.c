@@ -16,7 +16,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	int fd;
 	char *buffer;
-	ssize_t count, words = 0;
+	ssize_t count= 0;
 
 	if (filename == NULL)
 	{
@@ -40,7 +40,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	count = read(fd, buffer, letters);
 
-	words = write(STDOUT_FILENO, &buffer, count);
+	if (count > 0)
+	{
+		count = write(STDOUT_FILENO, &buffer, count);
+	}
 
 	free(buffer);
 	close(fd);
