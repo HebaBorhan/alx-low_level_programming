@@ -53,6 +53,12 @@ int create_file(const char *filename, char *text_content)
 	if (length != 0)
 	{
 		count = write(fd, text_content, length);
+
+		if (count == -1)
+		{
+			close(fd);
+			return (-1);
+		}
 	}
 
 	if (count != length)
