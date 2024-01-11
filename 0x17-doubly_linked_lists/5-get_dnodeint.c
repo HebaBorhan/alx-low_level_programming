@@ -5,8 +5,8 @@
 
 /**
  * get_dnodeint_at_index - returns the nth node of a list
- * @head - head
- * @index - index of the node
+ * @head: head
+ * @index: index of the node
  *
  * Return: int nth node
  */
