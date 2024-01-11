@@ -4,14 +4,14 @@
 #include <stdio.h>
 
 /**
- * add_nodeint - adds a new node at the beginning of a list
+ * add_dnodeint - adds a new node at the beginning of a list
  * @head: head
  * @n: integer
  *
  * Return: address of new element or NULL if failed
  */
 
-dlistint_t *add_nodeint(dlistint_t **head, const int n)
+dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
 	dlistint_t *first_node = malloc(sizeof(dlistint_t));
 
