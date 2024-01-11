@@ -5,8 +5,8 @@
 
 /**
  * delete_dnodeint_at_index - delete node at a given position
- * @h: head
- * @idx: given position
+ * @head: head
+ * @index: given position
  *
  * Return: 1 on success, -1 if failed
  */
@@ -24,6 +24,7 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	{
 		*head = (*head)->next;
 		if (*head != NULL)
+
 		{
 			(*head)->prev = NULL;
 		}
