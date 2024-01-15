@@ -1,1 +1,1 @@
-new README for prpject: C - Dynamic libraries
+new README file for prpject: C - Dynamic libraries
