@@ -5,7 +5,7 @@
 
 /**
  * add_node - adds new node
- * @key: pointer to the key
+ * @key: pointer to key
  * @value: pointer to value
  *
  * Return: pinter to new node or NULL
@@ -14,10 +14,8 @@ hash_node_t *add_node(const char *key, const char *value)
 {
     hash_node_t *new_node = malloc(sizeof(hash_node_t));
     if (new_node == NULL)
-    {
-        free (new_node);
-        NULL;
-    }
+        return NULL;
+
     new_node->key = strdup(key);
     if (new_node->key == NULL)
     {
@@ -59,10 +57,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         {
             item = strdup(value);
             if (item == NULL)
-            {
-                free(item);
                 return (0);
-            }
             free(tmp->value);
             tmp->value = item;
             return (1);
