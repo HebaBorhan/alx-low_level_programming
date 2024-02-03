@@ -45,19 +45,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
     unsigned long int index = key_index((const unsigned char *)key, ht->size);
     hash_node_t *tmp, *new_node;
-
-    if (ht == NULL || key == NULL || value == NULL || ht->array == NULL || ht->size == 0 || strlen(key) == 0)
+    char *item;
+    
+    if (ht ==  NULL || key == NULL || value == NULL)
         return (0);
-
     tmp = ht->array[index];
     while (tmp != NULL)
     {
         if (strcmp(tmp->key, key) == 0)
         {
-            tmp->value = strdup(value);
-            if (tmp->value == NULL)
+            item = strdup(value);
+            if (item == NULL)
                 return (0);
             free(tmp->value);
+            tmp->value = item;
             return (1);
         }
         tmp = tmp->next;
