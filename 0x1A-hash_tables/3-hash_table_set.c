@@ -4,6 +4,35 @@
 #include <stdio.h>
 
 /**
+ * add_node - adds new node
+ * @key: pointer to the key
+ * @value: pointer to value
+ *
+ * Return: pinter to new node or NULL
+ */
+hash_node_t *add_node(const char *key, const char *value)
+{
+    hash_node_t *new_node = malloc(sizeof(hash_node_t));
+    if (new_node == NULL)
+        return NULL;
+    new_node->key = strdup(key);
+    if (new_node->key == NULL)
+    {
+        free(new_node);
+        return NULL;
+    }
+    new_node->value = strdup(value);
+    if (new_node->value == NULL)
+    {
+        free(new_node->key);
+        free(new_node);
+        return NULL;
+    }
+    new_node->next = NULL;
+    return (new_node);
+}
+
+/**
  * hash_table_set - adds an element to the hash table
  * @ht: pointer to table
  * @key: pointer to the key
@@ -33,22 +62,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         }
         tmp = tmp->next;
     }
-    new_node = malloc(sizeof(hash_node_t));
-    if (new_node == NULL)
-        return (0);
-    new_node->key = strdup(key);
-    if (new_node->key == NULL)
-    {
-        free(new_node);
-        return (0);
-    }
-    new_node->value = strdup(value);
-    if (new_node->value == NULL)
-    {
-        free(new_node->key);
-        free(new_node);
-        return (0);
-    }
+    new_node = add_node(key, value);
     new_node->next = ht->array[index];
     ht->array[index] = new_node;
     return (1);
