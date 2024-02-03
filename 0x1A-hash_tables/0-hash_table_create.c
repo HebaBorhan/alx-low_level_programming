@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * hash_table_create - create a new hash table with given size
+ * hash_table_create - create new hash table with given size
  * @size: int table size
  * Return: pointer to newly created hash table or NULL on failure
  */
