@@ -58,7 +58,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         {
             item = strdup(value);
             if (item == NULL)
+            {
+                free(item);
                 return (0);
+            }
             free(tmp->value);
             tmp->value = item;
             return (1);
@@ -70,7 +73,5 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
         return (0);
     new_node->next = ht->array[index];
     ht->array[index] = new_node;
-    if (item != NULL)
-        free(item);
     return (1);
 }
