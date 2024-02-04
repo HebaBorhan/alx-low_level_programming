@@ -1,0 +1,28 @@
+#include "hash_tables.h"
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+
+/**
+ * hash_table_get - retrieves a value associated with a key
+ * @ht: pointer to table
+ *
+ */
+
+void hash_table_print(const hash_table_t *ht)
+{
+unsigned long int i;
+
+if (ht == NULL || ht->size == 0 || ht->array == NULL)
+printf("%s", "");
+
+i = 0;
+while (i < ht->size)
+{
+if (ht->array[i] != NULL)
+{
+printf("'%s': '%s', ", ht->array[i]->key, ht->array[i]->value);
+}
+i++;
+}
+}
