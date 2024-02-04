@@ -38,8 +38,6 @@ return (0);
 }
 new_node->next = NULL;
 index = key_index((const unsigned char *)key, ht->size);
-if (index >= ht->size)
-return (0);
 tmp = ht->array[index];
 while (tmp != NULL)
 {
