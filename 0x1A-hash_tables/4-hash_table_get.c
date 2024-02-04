@@ -25,6 +25,7 @@ if (strcmp(item->key, key) == 0)
 {
 return (item->value);
 }
+item = item->next;
 }
 
 return (NULL);
