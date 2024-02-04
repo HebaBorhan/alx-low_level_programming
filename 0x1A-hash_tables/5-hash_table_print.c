@@ -17,6 +17,7 @@ if (ht == NULL || ht->size == 0 || ht->array == NULL)
 return;
 
 i = 0;
+printf("{");
 while (i < ht->size)
 {
 if (ht->array[i] != NULL)
@@ -25,5 +26,6 @@ printf("'%s': '%s', ", ht->array[i]->key, ht->array[i]->value);
 }
 i++;
 }
+printf("}");
 printf("\n");
 }
