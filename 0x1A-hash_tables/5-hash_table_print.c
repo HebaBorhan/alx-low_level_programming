@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 /**
- * hash_table_get - retrieves a value associated with a key
+ * hash_table_print - prints hash table
  * @ht: pointer to table
  *
  */
