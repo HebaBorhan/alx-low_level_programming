@@ -19,6 +19,8 @@ hash_node_t *item = ht->array[index];
 if (ht ==  NULL || key == NULL || ht->size == 0 || ht->array == NULL)
 return (NULL);
 
+if (item == NULL)
+return NULL;
 while (item != NULL)
 {
 if (strcmp(item->key, key) == 0)
