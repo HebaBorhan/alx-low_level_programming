@@ -9,28 +9,27 @@
  * @key: pointer to the key
  *
  * Return: value associated with key, or NULL if key not found
-*/
+ */
 
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	hash_node_t *current_item;
-	unsigned long int index;
+    unsigned long int index;
+    hash_node_t *item;
 
-	if (ht == NULL || key == NULL || ht->array == NULL)
-	{
-		return (NULL);
-	}
-	index = key_index((const unsigned char *)key, ht->size);
-	current_item = ht->array[index];
-	if (current_item == NULL)
-	{
-		return (NULL);
-	}
-	while (current_item->next != NULL)
-	{
+    if (ht == NULL || key == NULL || ht->size == 0 || ht->array == NULL)
+        return (NULL);
 
-		current_item = current_item->next;
-	}
+    index = key_index((const unsigned char *)key, ht->size);
+    item = ht->array[index];
 
-	return (current_item->value);
+    while (item != NULL)
+    {
+        if (strcmp(item->key, key) == 0)
+        {
+            return (item->value);
+        }
+        item = item->next;
+    }
+
+    return (NULL);
 }
