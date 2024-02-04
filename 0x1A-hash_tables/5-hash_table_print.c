@@ -24,9 +24,7 @@ while (i < ht->size)
 node = ht->array[i];
 while (node != NULL)
 {
-printf("'%s': '%s'", node->key, node->value);
-if (node->next != NULL && i < ht->size - 1)
-printf(", ");
+printf("'%s': '%s', ", node->key, node->value);
 node = node->next;
 }
 i++;
