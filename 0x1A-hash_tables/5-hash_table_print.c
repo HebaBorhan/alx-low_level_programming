@@ -25,4 +25,5 @@ printf("'%s': '%s', ", ht->array[i]->key, ht->array[i]->value);
 }
 i++;
 }
+printf("\n");
 }
