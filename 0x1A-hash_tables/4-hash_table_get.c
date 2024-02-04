@@ -30,5 +30,5 @@ return (item->value);
 item = item->next;
 }
 
-return (NULL);
+return (item->value);
 }
