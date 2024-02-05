@@ -17,7 +17,7 @@ hash_node_t *node;
 if (ht == NULL || ht->size == 0 || ht->array == NULL)
 return;
 
-i= 0, items_printed = 0;
+i = 0, items_printed = 0;
 printf("{");
 while (i < ht->size)
 {
