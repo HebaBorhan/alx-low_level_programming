@@ -4,36 +4,35 @@
 #include <stdio.h>
 
 /**
- * hash_table_print - prints hash table
+ * hash_table_delete - deletes hash table
  * @ht: pointer to table
  *
  */
 
 void hash_table_delete(hash_table_t *ht)
 {
-unsigned long int i, items_printed;
+unsigned long int i;
 hash_node_t *node;
 
 if (ht == NULL || ht->size == 0 || ht->array == NULL)
 return;
 
-i = 0, items_printed = 0;
-printf("{");
+i = 0;
 while (i < ht->size)
 {
+while (ht->array[i] != NULL)
+{
 node = ht->array[i];
-while (node != NULL)
-{
-if (items_printed > 0)
-{
-printf(", ");
-}
-printf("'%s': '%s'", node->key, node->value);
-items_printed++;
-node = node->next;
+ht->array[i] = ht->array[i]->next;
+free(ht->array[i]->key);
+free(ht->array[i]->value);
+free(ht->array[i]);
+free(node);
 }
 i++;
 }
-printf("}");
-printf("\n");
+free(ht->array);
+ht->array = NULL;
+ht->size = 0;
+free(ht);
 }
