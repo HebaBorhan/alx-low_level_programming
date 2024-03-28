@@ -7,17 +7,21 @@ CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: $(NAME)
 
+check_header:
+	@test -f m.h || (echo "Missing header file m.h"; false)
+
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -o $@
 
 main.o: main.c m.h
-	$(CC) -c main.c -o main.o
+	$(CC) $(CFLAGS) -c $< -o $@
 
 school.o: school.c m.h
-	$(CC) -c school.c -o school.o
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(OBJ) $(NAME) *~ \#*\#
+	$(RM) $(NAME)
+	$(RM) *~ \#*\#
 
 oclean:
 	$(RM) $(OBJ)
