@@ -13,17 +13,12 @@ int binary_search(int *array, size_t size, int value)
 {
 size_t lower = 0;
 size_t middle, i;
-size_t higher = size -1;
-
+size_t higher = size - 1;
 if (array == NULL)
-{
 return (-1);
-}
-
 while (lower <= higher)
 {
 middle = lower + (higher - lower) / 2;
-
 printf("Searching in array: ");
 for (i = lower; i <= higher; i++)
 {
@@ -33,31 +28,27 @@ printf(", ");
 else
 printf("\n");
 }
-
 /*
- Check if vaue is present at middle
+ * Check if vaue is present at middle
 */
 if (array[middle] == value)
 {
-return middle;
+return (middle);
 }
-
 /*
- If value greater than middle, ignore left half
+ * If value greater than middle, ignore left half
 */
 if (array[middle] < value)
 {
 lower = middle + 1;
 }
-
 /*
- If value smaller than middle, ignore right half
+ * If value smaller than middle, ignore right half
 */
 else
 {
 higher = middle - 1;
 }
 }
-
 return (-1);
 }
