@@ -24,7 +24,7 @@ higher = (lower + jump < size) ? lower + jump : size - 1;
 
 printf("Value checked array[%ld] = [%d]\n", lower, array[lower]);
 
-if (value <= array[higher])
+if (value <= array[higher] || lower + jump >= size)
 break;
 
 lower += jump;
