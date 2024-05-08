@@ -30,10 +30,11 @@ break;
 lower += jump;
 }
 
+higher = lower + jump;
 printf("Value found between indexes [%ld] and [%ld]\n", lower, higher);
 
 i = lower;
-higher = (lower + jump < size) ? lower + jump : size - 1;
+
 while (i <= higher && i < size)
 {
 printf("Value checked array[%ld] = [%d]\n", i, array[i]);
